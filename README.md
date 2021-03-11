@@ -12,9 +12,7 @@ For git help see: https://github.com/LuukFTF/kpm-main/blob/master/dev/howto.md
 [repo_kpm-web]: https://github.com/LuukFTF/kpm-web.git
 [repo_kpm-arduino]: https://github.com/LuukFTF/kpm-arduino.git
 
-
 ---
-
 ## PHP7 Vagrant Box
 Original repository: [antwanvdm/php7-vagrant](https://github.com/antwanvdm/php7-vagrant)  
 by [Antwan](https://github.com/antwanvdm)
@@ -64,11 +62,13 @@ line in your **~/.ssh/config** file
     cd [repo]
     ```
 
-3. Run vagrantuser script to create the .vagrantuser file.
-BEWARE: Currently needs a manual path fix on Windows!! (the 'local_git_path')
+3. Run vagrantuser script to create the .vagrantuser file.  
     ```bash
     ./_scripts/create_vagrantuser_file.sh
     ```
+
+    BEWARE: Currently needs a manual path fix on Windows!! 
+    - in the `.vagrantuser` file change the value for `local_git_path:` from `"/c/...."` to `"c:/...."`
 
 4. Start Vagrant (grant admin in process for changing hosts file)
     ```bash
@@ -83,7 +83,7 @@ BEWARE: Currently needs a manual path fix on Windows!! (the 'local_git_path')
 
 1. Open bash/terminal in local reposistory
 
-2.
+2. Start Vagrant
     ```bash
     vagrant up
     ```
@@ -94,3 +94,5 @@ BEWARE: Currently needs a manual path fix on Windows!! (the 'local_git_path')
 * [MariaDB](https://mariadb.org/)
 * [Composer](https://getcomposer.org/)
 * [Xdebug](https://xdebug.org/)
+
+---
