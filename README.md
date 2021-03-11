@@ -70,6 +70,9 @@ line in your **~/.ssh/config** file
     BEWARE: Currently needs a manual path fix on Windows!! 
     - in the `.vagrantuser` file change the value for `local_git_path:` from `"/c/...."` to `"c:/...."`
 
+    If you want to use multiple vagrant boxes:
+    - change `ip_address:` to one thats not used anymore
+
 4. Start Vagrant (grant admin in process for changing hosts file)
     ```bash
     vagrant up
@@ -79,7 +82,7 @@ line in your **~/.ssh/config** file
 
 6. If it works, you're ready to develop inside the `/public` folder!
 
-### Vagrant Start
+### Starting Vagrant 
 
 1. Open bash/terminal in local reposistory
 
@@ -87,6 +90,18 @@ line in your **~/.ssh/config** file
     ```bash
     vagrant up
     ```
+
+### Connecting
+
+Open local website: http://[repo].local
+
+#### Connecting to database
+
+In MySQL Workbench
+1. Click on `Setup New Connection`
+2. Set Connection Name to correstponding repository name.
+3. Set Hostname to the corresponding `ip_address` in the `.vagrantuser` file (default: `192.168.50.5`)
+4. Set Username & Password (default: `root`)-
 
 ### Other References
 * [PHP](https://www.php.net/)
