@@ -1,5 +1,9 @@
 # kpm-web readme
 
+## General
+
+## Git
+
 For git help see: https://github.com/LuukFTF/kpm-main/blob/master/dev/howto.md
 
 ## Repos
