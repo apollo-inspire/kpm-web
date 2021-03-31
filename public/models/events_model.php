@@ -77,7 +77,6 @@ class Event {
     public function getEvent($id) {
         $DBC = new DatabaseConnection();
         
-
         $query = "SELECT * 
         FROM events
         WHERE event_id = $id";
@@ -99,5 +98,4 @@ class Event {
     public function updateEvent() {
 
     }
-
 }
