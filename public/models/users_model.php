@@ -28,8 +28,35 @@ class Users {
     }
 
     public function addUser() {
-
+        // inputs
+        // validate
+        // add to database
+        // return succes
     }
+
+    public function signup() {
+        // inputs
+        // validate
+        // add to database
+        // return succes
+    }
+
+    public function login() {
+        // inputs 
+        // get remote data
+        // compare 
+        // passwordCheck()
+        // create session
+        // return boolean
+    }
+
+    public function passwordCheck($password) {
+        // input password
+        // get remote password
+        // compare
+        // return boolean
+    }
+
 }
 
 class User {
@@ -84,6 +111,11 @@ class User {
 
     public function updateUser() {
 
+    }
+
+    public function logout() {
+        // destory session
+        // report succes 
     }
 
 }
