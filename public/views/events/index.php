@@ -10,7 +10,7 @@ $totalEvents = $events->getTotal();
 
 
 <?php 
-for($i = 0; $i < $totalEvents; $i++) { 
+for($i = 1; $i < $totalEvents + 1; $i++) { 
 $event = new Event($i);
 echo $event->event_id; echo '<br>';
 echo $event->stream_id; echo '<br>';

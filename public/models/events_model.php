@@ -26,10 +26,13 @@ class Events {
 
         return $this->totalEvents;
     }
+
+    public function addEvent() {
+
+    }
 }
 
 class Event {
-
     public $id;
 
     public $event;
@@ -53,7 +56,7 @@ class Event {
     function __construct($id){
         $this->id = $id;
 
-        $this->event = $this->getData($id);
+        $this->event = $this->getEvent($id);
 
         $this->event_id = $this->event['event_id'];
         $this->stream_id = $this->event['stream_id'];
@@ -71,7 +74,7 @@ class Event {
         $this->datecreated = $this->event['datecreated'];
     }
 
-    public function getData($id) {
+    public function getEvent($id) {
         $DBC = new DatabaseConnection();
         
 
@@ -89,7 +92,12 @@ class Event {
         return $event;
     }
 
-    public function getEvent() {
-         
+    public function deleteEvent() {
+
     }
+
+    public function updateEvent() {
+
+    }
+
 }
