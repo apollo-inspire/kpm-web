@@ -37,7 +37,7 @@ CREATE TABLE `events` (
 	`date` DATETIME NOT NULL,
 	`starttime` TIME,
 	`endtime` TIME,
-	`description` varchar(255),
+	`description` text,
 	`artists` varchar(255),
 	`host` varchar(255),
 	`sociallinks` varchar(255),
