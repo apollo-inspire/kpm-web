@@ -40,6 +40,79 @@ if (isset($_POST['submit'])) {
     <input type="password" id="password" name="password" value="<?= isset($_POST['password']) ? $_POST['password'] : '' ?>">
     <input method="post" type="submit" name="submit" value="Login"></input>
 </form>
+<!-- Navbar -->
+<div class="navbar">
+    <div class="container flex">
+        <h1 class="logo">HeerenHuys</h1>
+        <nav>
+            <ul>
+                <li> <a href="../homepage/index.php">Home </a> </li>
+                <li> <a href="../events/index.php">Event </a> </li>
+                <li> <a href="../Login/index.php">Login/Register</a> </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!--  Showcase  -->
+<section class="showcase">
+    <div class="container grid">
+        <!--        Register -->
+        <div class="showcase-form card">
+            <h2>Register</h2>
+            <form>
+                <div class="form-control">
+                    <input type="text" name="name" placeholder="Name">
+                </div>
+                <div class="form-control">
+                    <input type="email" name="email" placeholder="E-Mail">
+                </div>
+                <div class="form-control">
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <div class="form-control">
+                    <input type="password" name="password" placeholder="Confirm Password">
+                </div>
+                <input type="submit" value="Login" class="btn">
+            </form>
+        </div>
+        <!-- Login -->
+        <div class="showcase-form card">
+            <h2>Login</h2>
+            <form>
+                <div class="form-control">
+                    <input type="text" name="name" placeholder="Name">
+                </div>
+                <div class="form-control">
+                    <input type="email" name="email" placeholder="E-Mail">
+                </div>
+                <div class="form-control">
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <input type="submit" value="Login" class="btn">
+            </form>
+        </div>
+
+
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container flex">
+        <ul>
+            <li>
+                <a href="heerenhuyskamerconcerten.nl/contact/">Contact</a>
+            </li>
+            <li>
+                <a href="heerenhuyskamerconcerten.nl/nieuws/">Nieuws</a>
+            </li>
+            <li>
+                <a href="heerenhuyskamerconcerten.nl/huisregels">Huisregels</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
 
 </body>
 </html>

@@ -59,21 +59,47 @@ for($i = 1; $i < $totalEvents + 1; $i++) {
 </div>
 
 <!--  Showcase  -->
-<div class="card">
-    <h1>Event name</h1>
-    <h3>Artist</h3>
-    <h4>description</h4>
-</div>
-<div class="card">
-    <h1>Event name</h1>
-    <h3>Artist</h3>
-    <h4>description</h4>
-</div>
-<div class="card">
-    <h1>Event name</h1>
-    <h3>Artist</h3>
-    <h4>description</h4>
-</div>
+<section class="showcase">
+    <div class="container grid">
+        <!-- Event Cards -->
+        <div class="showcase-form card">
+            <h2>Event Name</h2>
+            <form>
+                <div class="form-control">
+                    <p>Artist</p>
+                </div>
+                <div class="form-control">
+                    <p>*Artist name*</p>
+                </div>
+                <div class="form-control">
+                    <p>Date and Time</p>
+                </div>
+                <div class="form-control">
+                    <p>*Date and Time*</p>
+                </div>
+                <a href="../Streams/index.php" class="btn">View</a>
+            </form>
+        </div>
+        <div class="showcase-form card">
+            <h2>Event Name</h2>
+            <form>
+                <div class="form-control">
+                    <p>Artist</p>
+                </div>
+                <div class="form-control">
+                    <p>*Artist name*</p>
+                </div>
+                <div class="form-control">
+                    <p>Date and Time</p>
+                </div>
+                <div class="form-control">
+                    <p>*Date and Time*</p>
+                </div>
+                <a href="../Streams/index.php" class="btn">Views</a>
+            </form>
+        </div>
+    </div>
+</section>
 
 <footer class="footer">
     <div class="container flex">
@@ -91,6 +117,6 @@ for($i = 1; $i < $totalEvents + 1; $i++) {
     </div>
 </footer>
 
+
 </body>
 </html>
-
