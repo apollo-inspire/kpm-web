@@ -14,25 +14,7 @@ $session = new Session();
 $session->checkLoginSet();
 ?>
 
-<?php 
-for($i = 1; $i < $totalEvents + 1; $i++) { 
-    $event = new Event($i);
-    echo $event->event_id; echo '<br>';
-    echo $event->stream_id; echo '<br>';
-    echo $event->name; echo '<br>';
-    echo $event->date; echo '<br>';
-    echo $event->starttime; echo '<br>';
-    echo $event->endtime; echo '<br>';
-    echo $event->description; echo '<br>';
-    echo $event->artists; echo '<br>';
-    echo $event->host; echo '<br>';
-    echo $event->sociallinks; echo '<br>';
-    echo $event->genre; echo '<br>';
-    echo $event->host_user; echo '<br>';
-    echo $event->moderator_user; echo '<br>';
-    echo $event->datecreated; echo '<br>';
-} 
-?>
+
 
 <!doctype html>
 <html lang="en">
@@ -58,46 +40,47 @@ for($i = 1; $i < $totalEvents + 1; $i++) {
     </div>
 </div>
 
+
+<!-- $event->stream_id
+$event->name
+$event->date
+$event->starttime
+$event->endtime
+$event->description
+$event->artists
+$event->host
+$event->sociallinks
+$event->genre
+$event->host_user
+$event->moderator_user
+$event->datecreated -->
+
 <!--  Showcase  -->
 <section class="showcase">
     <div class="container grid">
         <!-- Event Cards -->
+        <?php for($i = 1; $i < $totalEvents + 1; $i++) { $event = new Event($i); ?>
+
         <div class="showcase-form card">
-            <h2>Event Name</h2>
+            <h2><?= $event->name ?></h2>
             <form>
                 <div class="form-control">
                     <p>Artist</p>
                 </div>
                 <div class="form-control">
-                    <p>*Artist name*</p>
+                    <p><?= $event->artists ?></p>
                 </div>
                 <div class="form-control">
                     <p>Date and Time</p>
                 </div>
                 <div class="form-control">
-                    <p>*Date and Time*</p>
+                <p><?= $event->date; ?> <?= $event->starttime; ?> </p>
                 </div>
-                <a href="../Streams/index.php" class="btn">View</a>
+                <a href="../Streams/index.php?id=<?= $event->stream_id; ?>" class="btn">View</a>
             </form>
         </div>
-        <div class="showcase-form card">
-            <h2>Event Name</h2>
-            <form>
-                <div class="form-control">
-                    <p>Artist</p>
-                </div>
-                <div class="form-control">
-                    <p>*Artist name*</p>
-                </div>
-                <div class="form-control">
-                    <p>Date and Time</p>
-                </div>
-                <div class="form-control">
-                    <p>*Date and Time*</p>
-                </div>
-                <a href="../Streams/index.php" class="btn">Views</a>
-            </form>
-        </div>
+        <?php } ?>
+
     </div>
 </section>
 

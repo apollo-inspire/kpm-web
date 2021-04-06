@@ -1,3 +1,18 @@
+<?php 
+date_default_timezone_set('Europe/Amsterdam');
+
+require_once $_SERVER['DOCUMENT_ROOT'].'/models/streams_model.php';
+
+$streams = new Streams();
+$totalStreams = $streams->getTotal();
+
+$id = $_GET['id'];
+
+$stream = new Stream($id);
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -31,9 +46,9 @@
 
         </div>
         <div class="streaminfo">
-            <h1>Name of Show</h1>
-            <p>Name of the Band</p>
-            <p>Description: geniet van deze korte dummy text. ;)</p>
+            <h1> <?= $stream->title; ?> </h1>
+            <p <?=  $stream->subtitle; ?> </p>
+            <p><?=  $stream->timeleft; ?> </p>
         </div>
     </div>
 </section>
