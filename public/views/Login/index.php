@@ -1,3 +1,24 @@
+<?php
+session_start();
+
+date_default_timezone_set('Europe/Amsterdam');
+
+require_once $_SERVER['DOCUMENT_ROOT'].'/models/users_model.php';
+
+$users = new Users();
+
+checkSessionSet();
+
+
+if (isset($_POST['submit'])) {
+    isset($_POST['username'])   ? $username     = htmlspecialchars($_POST['username'], ENT_QUOTES)         : $errors[] = 'Ssername is required';
+    isset($_POST['password'])   ? $password     = $_POST['password']                                       : $errors[] = 'Password is required';
+
+    $users->login($username, $password) ? header("Location: /views/homepage") : $errors[] = 'Login Failed';
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,6 +29,16 @@
     <script type="text/javascript" src="../../js/main.js"></script>
 </head>
 <body>
+<h1>Login</h1>
+
+<!-- backend test -->
+<form method="post" action="">
+    <label>Username</label>
+    <input type="text" id="username" name="username" value="<?= isset($_POST['username']) ? $_POST['username'] : '' ?>">
+    <label>Password</label>
+    <input type="password" id="password" name="password" value="<?= isset($_POST['password']) ? $_POST['password'] : '' ?>">
+    <input method="post" type="submit" name="submit" value="Login"></input>
+</form>
 
 </body>
 </html>

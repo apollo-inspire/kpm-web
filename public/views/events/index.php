@@ -8,7 +8,6 @@ $totalEvents = $events->getTotal();
 
 ?>
 
-
 <?php 
 for($i = 1; $i < $totalEvents + 1; $i++) { 
     $event = new Event($i);
@@ -85,7 +84,6 @@ for($i = 1; $i < $totalEvents + 1; $i++) {
         </ul>
     </div>
 </footer>
-
 
 </body>
 </html>

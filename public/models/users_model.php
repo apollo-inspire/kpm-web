@@ -4,6 +4,28 @@ date_default_timezone_set('Europe/Amsterdam');
 require_once $_SERVER['DOCUMENT_ROOT'].'/core/db-connect.php';
 
 
+function checkSessionSet() {
+    if (isset($_SESSION['logindata'])) {
+        header("Location: /views/homepage");
+        exit;
+    }
+}
+
+class Session {
+
+    function getSessionData() {
+
+    }
+
+    function checkSessionSet() {
+        if (isset($_SESSION['logindata'])) {
+            header("Location: /views/homepage");
+            exit;
+        }
+    }
+}
+
+
 class Users {
     public $totalUsers;
 
@@ -41,20 +63,43 @@ class Users {
         // return succes
     }
 
-    public function login() {
-        // inputs 
-        // get remote data
-        // compare 
-        // passwordCheck()
-        // create session
-        // return boolean
+    public function login($username, $password) {    
+        if(empty($errors)) {  
+        $DBC = new DatabaseConnection(); 
+
+        $query = "SELECT user_id, password, username, role, name
+        FROM users
+        WHERE username = '$username'";
+
+        $result3 = mysqli_query($DBC->DB, $query)
+        or $errors[] = 'Error: '.mysqli_error($DBC->DB);
+
+        $user = mysqli_fetch_assoc($result3);
+
+        mysqli_close($DBC->DB);
+        }
+
+        if(password_verify($password, $user['password'])){
+            $this->setSessionLogin($user);
+            return true;
+        };
+    
+
     }
 
-    public function passwordCheck($password) {
-        // input password
-        // get remote password
-        // compare
-        // return boolean
+    public function setSessionLogin($user){
+        $_SESSION['logindata'] = [
+            'user_id' => $user['user_id'],
+            'role' => $user['role'],
+            'username' => $user['name']
+        ];
+    }
+
+    
+    public function logout() {
+        session_start();
+        session_destroy();
+        header('Location: /views/login');
     }
 
 }
@@ -113,9 +158,5 @@ class User {
 
     }
 
-    public function logout() {
-        // destory session
-        // report succes 
-    }
 
 }
