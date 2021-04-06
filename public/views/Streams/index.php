@@ -22,45 +22,18 @@
     </div>
 </div>
 
-<!--  Showcase  -->
-<section class="showcase">
+<section>
     <div class="container grid">
-        <!-- Event Cards -->
-        <div class="showcase-form card">
-            <h2>Event Name</h2>
-            <form>
-                <div class="form-control">
-                    <p>Artist</p>
-                </div>
-                <div class="form-control">
-                    <p>*Artist name*</p>
-                </div>
-                <div class="form-control">
-                    <p>Date and Time</p>
-                </div>
-                <div class="form-control">
-                    <p>*Date and Time*</p>
-                </div>
-                <a href="../Streams/index.php" class="btn">View</a>
-            </form>
+        <div class="streamcard">
+            <video></video>
         </div>
-        <div class="showcase-form card">
-            <h2>Event Name</h2>
-            <form>
-                <div class="form-control">
-                    <p>Artist</p>
-                </div>
-                <div class="form-control">
-                    <p>*Artist name*</p>
-                </div>
-                <div class="form-control">
-                    <p>Date and Time</p>
-                </div>
-                <div class="form-control">
-                    <p>*Date and Time*</p>
-                </div>
-                <a href="../Streams/index.php" class="btn">Views</a>
-            </form>
+        <div class="chatcard">
+
+        </div>
+        <div class="streaminfo">
+            <h1>Name of Show</h1>
+            <p>Name of the Band</p>
+            <p>Description: geniet van deze korte dummy text. ;)</p>
         </div>
     </div>
 </section>

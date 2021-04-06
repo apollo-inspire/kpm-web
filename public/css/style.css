@@ -96,7 +96,8 @@ a {
 }
 
 .showcase-form input[type="text"],
-.showcase-form input[type="email"] {
+.showcase-form input[type="email"],
+.showcase-form input[type="password"]{
     border: 0;
     border-bottom: 1px solid #b4becb;
     width: 100%;
@@ -185,6 +186,26 @@ a {
     width: auto;
 }
 
+.streamcard {
+    background-color: #ffffff;
+    margin: 10px;
+}
+
+.streamcard video{
+    width: 2fr;
+}
+
+.chatcard {
+    background-color: #ffffff;
+    width: 20%;
+    margin: 10px;
+}
+
+.streaminfo {
+    background-color: #ffffff;
+    width: 100%;
+}
+
 .btn {
     display: inline-block;
     padding: 10px 30px;
@@ -192,7 +213,8 @@ a {
     background-color: var(--secondary-color);
     color: #ffffff;
     border: none;
-    border-radius: 5px ;
+    border-radius: 5px;
+    transform: scale(1);
 }
 
 .btn-outline {
