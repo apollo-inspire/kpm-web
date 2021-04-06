@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_facebook</title>
+    <defs>
+        <rect id="path-1" x="0" y="100" width="2207" height="51"></rect>
+        <filter x="-0.7%" y="-24.5%" width="101.3%" height="156.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="header" transform="translate(-1514.000000, -110.000000)">
+            <g id="Rectangle">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#9EC9A5" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <g id="icon_facebook" transform="translate(1514.000000, 110.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                <path d="M15.9,0 C7.1,0 0,7.1 0,15.9 C0,24.7 7.1,31.8 15.9,31.8 C24.7,31.8 31.8,24.7 31.8,15.9 C31.7,7.1 24.6,0 15.9,0 Z M20.1,15.8 L17.4,15.8 C17.4,20.2 17.4,25.6 17.4,25.6 L13.3,25.6 C13.3,25.6 13.3,20.2 13.3,15.8 L11.4,15.8 L11.4,12.3 L13.3,12.3 L13.3,10.1 C13.2,8.5 14,6 17.4,6 L20.4,6 L20.4,9.4 C20.4,9.4 18.6,9.4 18.2,9.4 C17.8,9.4 17.3,9.6 17.3,10.3 L17.3,12.3 L20.4,12.3 L20.1,15.8 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
