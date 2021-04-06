@@ -22,35 +22,43 @@
         </div>
     </div>
 
-<!--  Showcase  -->
-<section class="showcase">
-    <div class="container grid">
-        <div class="showcase-text">
-            <h1>Events</h1>
-            <p>i dont know what the fuck
-            i need to type here so this is
-            just some temporary dummy text.</p>
-            <a href="../events/index.php" class="btn btn-outline">Events</a>
-        </div>
+    <!--  Showcase  -->
+    <section class="showcase">
+        <div class="container grid">
+            <div class="showcase-text">
+                <h1>HeerenHuys</h1>
+                <p>Welkom bij de website van het HeerenHuys. Hier kan je een plek kopen om naar een huiskamerconcert te kijken.
+                Het concert zelf is online. Maar om de ervaring beter te maken sturen wij u een maquette van onze kamer
+                zodat de beleving nog beter is. Bekijk hier onder welke evenementen wij op het moment beschikbaar hebben.</p>
+                <a href="../events/index.php" class="btn btn-outline">Events</a>
+            </div>
 
-        <div class="showcase-form card">
-            <h2>Event</h2>
-            <form>
-                <div class="form-control">
-                    <input type="text" name="name" placeholder="Name" required>
-                </div>
-                <div class="form-control">
-                    <input type="text" name="company" placeholder="Company  Name" required>
-                </div>
-                <div class="form-control">
-                    <input type="email" name="email" placeholder="Email" required>
-                </div>
-                <input type="submit" value="send" class="btn btn-primary">
+            <div class="showcase-form card">
+                <h2>Het Heerenhuys</h2>
+                <form>
+                    <img src="../../IMG/HeerenhuysHomepage.jpg">
 
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <footer class="footer">
+        <div class="container flex">
+            <ul>
+                <li>
+                    <a href="heerenhuyskamerconcerten.nl/contact/">Contact</a>
+                </li>
+                <li>
+                    <a href="heerenhuyskamerconcerten.nl/nieuws/">Nieuws</a>
+                </li>
+                <li>
+                    <a href="heerenhuyskamerconcerten.nl/huisregels">Huisregels</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
 
 </body>
 </html>
