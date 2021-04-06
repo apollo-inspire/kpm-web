@@ -2,13 +2,14 @@
 date_default_timezone_set('Europe/Amsterdam');
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/models/streams_model.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/models/events_model.php';
 
 $streams = new Streams();
 $totalStreams = $streams->getTotal();
 
 $id = $_GET['id'];
 
-$stream = new Stream($id);
+$event = new Event($id);
 
 ?>
 
@@ -46,9 +47,9 @@ $stream = new Stream($id);
 
         </div>
         <div class="streaminfo">
-            <h1> <?= $stream->title; ?> </h1>
-            <p <?=  $stream->subtitle; ?> </p>
-            <p><?=  $stream->timeleft; ?> </p>
+            <h1> <?= $event->name; ?> </h1>
+            <p> <?= $event->description  ?> </p>
+            <p><?=  $event->starttime.' - '.$event->endtime; ?> </p>
         </div>
     </div>
 </section>

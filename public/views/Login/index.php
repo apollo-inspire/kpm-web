@@ -30,16 +30,7 @@ if (isset($_POST['submit'])) {
     <script type="text/javascript" src="../../js/main.js"></script>
 </head>
 <body>
-<h1>Login</h1>
 
-<!-- backend test -->
-<form method="post" action="">
-    <label>Username</label>
-    <input type="text" id="username" name="username" value="<?= isset($_POST['username']) ? $_POST['username'] : '' ?>">
-    <label>Password</label>
-    <input type="password" id="password" name="password" value="<?= isset($_POST['password']) ? $_POST['password'] : '' ?>">
-    <input method="post" type="submit" name="submit" value="Login"></input>
-</form>
 <!-- Navbar -->
 <div class="navbar">
     <div class="container flex">
@@ -57,7 +48,7 @@ if (isset($_POST['submit'])) {
 <!--  Showcase  -->
 <section class="showcase">
     <div class="container grid">
-        <!--        Register -->
+        <!--  Register -->
         <div class="showcase-form card">
             <h2>Register</h2>
             <form>
@@ -65,7 +56,7 @@ if (isset($_POST['submit'])) {
                     <input type="text" name="name" placeholder="Name">
                 </div>
                 <div class="form-control">
-                    <input type="email" name="email" placeholder="E-Mail">
+                    <input type="email" name="email" placeholder="Email">
                 </div>
                 <div class="form-control">
                     <input type="password" name="password" placeholder="Password">
@@ -79,21 +70,16 @@ if (isset($_POST['submit'])) {
         <!-- Login -->
         <div class="showcase-form card">
             <h2>Login</h2>
-            <form>
+            <form method="post" action="">
                 <div class="form-control">
-                    <input type="text" name="name" placeholder="Name">
+                    <input type="text" id="username" name="username" value="<?= isset($_POST['username']) ? $_POST['username'] : '' ?>" placeholder="Username">
                 </div>
                 <div class="form-control">
-                    <input type="email" name="email" placeholder="E-Mail">
+                    <input type="password" id="password" name="password" value="<?= isset($_POST['password']) ? $_POST['password'] : '' ?>" placeholder="Password">
                 </div>
-                <div class="form-control">
-                    <input type="password" name="password" placeholder="Password">
-                </div>
-                <input type="submit" value="Login" class="btn">
+                <input method="post" type="submit" name="submit" value="Login" class="btn"></input>
             </form>
         </div>
-
-
     </div>
 </section>
 
