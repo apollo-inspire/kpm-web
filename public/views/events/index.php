@@ -29,7 +29,7 @@ $session->checkLoginSet();
 <!-- Navbar -->
 <div class="navbar">
     <div class="container flex">
-        <h1 class="logo">HeerenHuys</h1>
+        <h1 class="logo">Heerenhuysje</h1>
         <nav>
             <ul>
                 <li> <a href="../homepage/index.php">Home </a> </li>

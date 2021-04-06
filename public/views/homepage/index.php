@@ -11,7 +11,7 @@
     <!-- Navbar -->
     <div class="navbar">
         <div class="container flex">
-            <h1 class="logo">HeerenHuys</h1>
+            <h1 class="logo">Heerenhuysje</h1>
             <nav>
                  <ul>
                       <li> <a href="../homepage/index.php">Home </a> </li>
@@ -26,8 +26,8 @@
     <section class="showcase">
         <div class="container grid">
             <div class="showcase-text">
-                <h1>HeerenHuys</h1>
-                <p>Welkom bij de website van het HeerenHuys. Hier kan je een plek kopen om naar een huiskamerconcert te kijken.
+                <h1>Heerenhuysje</h1>
+                <p>Welkom bij de website van het Heerenhuysje. Hier kan je een plek kopen om naar een huiskamerconcert te kijken.
                 Het concert zelf is online. Maar om de ervaring beter te maken sturen wij u een maquette van onze kamer
                 zodat de beleving nog beter is. Bekijk hier onder welke evenementen wij op het moment beschikbaar hebben.</p>
                 <a href="../events/index.php" class="btn btn-outline">Events</a>
