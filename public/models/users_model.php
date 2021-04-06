@@ -4,13 +4,6 @@ date_default_timezone_set('Europe/Amsterdam');
 require_once $_SERVER['DOCUMENT_ROOT'].'/core/db-connect.php';
 
 
-function checkSessionSet() {
-    if (isset($_SESSION['logindata'])) {
-        header("Location: /views/homepage");
-        exit;
-    }
-}
-
 class Session {
 
     function getSessionData() {
@@ -19,6 +12,13 @@ class Session {
 
     function checkSessionSet() {
         if (isset($_SESSION['logindata'])) {
+            header("Location: /views/login/logout");
+            exit;
+        }
+    }
+
+    function checkLoginSet(){
+        if (!isset($_SESSION['logindata'])) {
             header("Location: /views/homepage");
             exit;
         }
@@ -83,7 +83,6 @@ class Users {
             $this->setSessionLogin($user);
             return true;
         };
-    
 
     }
 
@@ -97,7 +96,6 @@ class Users {
 
     
     public function logout() {
-        session_start();
         session_destroy();
         header('Location: /views/login');
     }

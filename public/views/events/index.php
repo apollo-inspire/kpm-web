@@ -1,4 +1,5 @@
 <?php 
+session_start();
 date_default_timezone_set('Europe/Amsterdam');
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/models/events_model.php';
@@ -6,6 +7,11 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/models/events_model.php';
 $events = new Events();
 $totalEvents = $events->getTotal();
 
+require_once $_SERVER['DOCUMENT_ROOT'].'/models/users_model.php';
+
+$session = new Session();
+
+$session->checkLoginSet();
 ?>
 
 <?php 
